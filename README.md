@@ -1,2 +1,2 @@
-# learn
-learning
+Welcome to my study note!!
+😀😀❤
