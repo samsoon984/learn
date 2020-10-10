@@ -10,7 +10,7 @@ def get_url(number = int(input('품번 입력: ')), page = int(input('쪽수 입
     #    i+=1
     #url1 = "https://hiyobi.me/reader/%d#1"%number
     i = 1
-    path = "C:/Bitnami/wampstack-7.4.10-0/apache2/htdocs/learn/%s"%number
+    #path = "C:/Bitnami/wampstack-7.4.10-0/apache2/htdocs/learn/%s"%number
     try:
         if not(os.path.isdir("%s"%number)):
             os.makedirs(os.path.join("%s"%number))
