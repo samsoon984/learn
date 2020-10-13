@@ -7,10 +7,10 @@ import random
 
 start = time.time()
 
-def get_url(number = int(input('품번 입력: '))):
+def get_url(number = str(input('품번 입력: '))):
     try:
         if not(os.path.isdir(number)):
-            os.makedirs(os.path.join(f"{number}"))
+            os.makedirs(os.path.join(number))
             print("making directory..")
     except:
         print("already exist..")
