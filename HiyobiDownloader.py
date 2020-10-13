@@ -4,6 +4,7 @@ import requests
 import os
 import sys
 import time
+import random
 
 
 i = 1
@@ -26,6 +27,8 @@ def get_url(number = int(input('품번 입력: '))):
             file.close()
             os.chdir(path2)
             i += 1
+            print("sleep,,, this is not error")
+            time.sleep( random.uniform(0.5,1) )
         else:
             print("time :", time.time() - start)
             sys.exit()
