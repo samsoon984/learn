@@ -54,12 +54,9 @@ def get_url(number = int(input('품번 입력: '))):
     #soup = BeautifulSoup(res.text, 'html.parser')
     #print(soup)
 
+
+
+
 get_url()
-
-
-
-
-
-
 
 
