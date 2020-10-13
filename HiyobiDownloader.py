@@ -14,7 +14,7 @@ start = time.time()
 def get_url(number = int(input('품번 입력: '))):
     path1 = "./%s"%number
     path2 = "../"
-    def get_num(q = int):
+    def get_num(q: int):
         global i
         url = "https://cdn.hiyobi.me/data/%d/%s%d.jpg"%(number,q,i)
         res = requests.get(url)
