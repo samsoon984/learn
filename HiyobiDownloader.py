@@ -26,7 +26,7 @@ def get_url(number = int(input('품번 입력: '))):
         if (res.status_code == 200):
             with open(f"{i}.jpg", "wb") as f:
                 f.write(res.content)
-            f.close()
+                f.close()
             i += 1
             print("sleep,,, this is not error")
             time.sleep( random.uniform(0.5,1) )
