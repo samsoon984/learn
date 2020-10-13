@@ -3,15 +3,16 @@ from html.parser import HTMLParser
 import requests
 import os
 import sys
+import time
 
 
 i = 1
 
-
+start = time.time()
 
 def get_url(number = int(input('품번 입력: '))):
     path1 = "./%s"%number
-    path2 = "./"
+    path2 = "../"
     def get_num(q = int):
         global i
         url = "https://cdn.hiyobi.me/data/%d/%s%d.jpg"%(number,q,i)
@@ -26,6 +27,7 @@ def get_url(number = int(input('품번 입력: '))):
             os.chdir(path2)
             i += 1
         else:
+            print("time :", time.time() - start)
             sys.exit()
     #while i <= 10:
     #    print("https://hitomi.la/reader/%d.html#%d"%(number,i))
