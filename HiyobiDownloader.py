@@ -8,7 +8,10 @@ import sys
 i = 1
 
 
+
 def get_url(number = int(input('품번 입력: '))):
+    path1 = "./%s"%number
+    path2 = "./"
     def get_num(q = int):
         global i
         url = "https://cdn.hiyobi.me/data/%d/%s%d.jpg"%(number,q,i)
@@ -28,9 +31,6 @@ def get_url(number = int(input('품번 입력: '))):
     #    print("https://hitomi.la/reader/%d.html#%d"%(number,i))
     #    i+=1
     #url1 = "https://hiyobi.me/reader/%d#1"%number
-    
-    path1 = "C:/Bitnami/wampstack-7.4.10-0/apache2/htdocs/learn/%s"%number
-    path2 = "C:/Bitnami/wampstack-7.4.10-0/apache2/htdocs/learn"
     try:
         if not(os.path.isdir("%s"%number)):
             os.makedirs(os.path.join("%s"%number))
