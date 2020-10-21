@@ -43,7 +43,7 @@ def goDownload():
             li_list.extend(data1.findAll('img'))
         i = 1
         for li in li_list:
-            img_src = li['src']
+            img_src = str(li['src'])
             with open(f"./{name}/{getNum}/{i}.jpg", "wb") as f:
                 data = requests.get(img_src).content
                 f.write(data)
