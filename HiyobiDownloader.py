@@ -7,7 +7,7 @@ import random
 
 start = time.time()
 
-def get_url(number = str(input('품번 입력: '))):
+def imgDownload(number = str(input('품번 입력: '))):
     try:
         if not(os.path.isdir(number)):
             os.makedirs(os.path.join(number))
@@ -30,6 +30,6 @@ def get_url(number = str(input('품번 입력: '))):
             print("time :", time.time() - start)
             sys.exit()
     
-get_url()
+imgDownload()
 
 
