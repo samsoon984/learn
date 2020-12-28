@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 url = input("url 입력( 예시: https://www.fmkorea.com/123456 ): ")
 if 'best' in url:
     url = url.replace('/best','')
+elif 'https://www.fmkorea.com/' not in url:
+    url = f'https://www.fmkorea.com/{url}'
 urlNum = url.replace('https://www.fmkorea.com/','')
 req = requests.get(url)
 html = req.text
