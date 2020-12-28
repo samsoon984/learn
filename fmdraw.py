@@ -9,8 +9,8 @@ req = requests.get(url)
 html = req.text
 soup = BeautifulSoup(html, 'html.parser')
 getComments = soup.select('#cmtPosition > ul')
-firstfind = soup.find('ul', {'class' :'fdb_lst_ul'}).find_all('a', {'href' :'#popup_menu_area'})
-cutOverlap = list(set(firstfind))
+find = soup.find('ul', {'class' :'fdb_lst_ul'}).find_all('a', {'href' :'#popup_menu_area'})
+cutOverlap = list(set(find))
 listnum = 0
 print('----------------------------------')
 for i in cutOverlap:
